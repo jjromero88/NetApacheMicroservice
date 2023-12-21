@@ -1,10 +1,10 @@
 ﻿
 namespace Banking.Cqrs.Core.Events
 {
-    public class FoundsDepositedEvent : BaseEvent
+    public class FundsDepositedEvent : BaseEvent
     {
         public double Amount { get; set; }
-        public FoundsDepositedEvent(string id) : base(id)
+        public FundsDepositedEvent(string id) : base(id)
         {
         }
     }
