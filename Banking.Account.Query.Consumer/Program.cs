@@ -11,15 +11,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
-
-
-
 builder.Services.Configure<KafkaSettings>(builder.Configuration.GetSection("KafkaSettings"));
 builder.Services.AddInfrastructureService(builder.Configuration);
 builder.Services.AddSingleton<IHostedService, BankAccountConsumerService>();
 
 
+
+var app = builder.Build();
 
 
 // Configure the HTTP request pipeline.

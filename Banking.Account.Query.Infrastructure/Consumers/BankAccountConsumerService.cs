@@ -34,7 +34,7 @@ namespace Banking.Account.Query.Infrastructure.Consumers
             {
                 using (var consumerBuilder = new ConsumerBuilder<Ignore, string>(config).Build())
                 {
-                    var bankTopics = new String[]
+                    var bankTopics = new string[]
                     {
                         typeof(AccountOpenedEvent).Name,
                         typeof(AccountClosedEvent).Name,
